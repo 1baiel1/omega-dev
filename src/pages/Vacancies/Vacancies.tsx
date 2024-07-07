@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import Footer from "../../Companent/Footer/Footer";
 import Header from "../../Companent/Header/Header";
 import "./Vacancies.css";
+import useFetch from "../../hooks/useFetch";
+
 
 function Vacancies() {
+  const { data, isLoading } = useFetch({ API_URL: 'http://3.38.98.134/jobs'});
+  console.log("data: ",data);
+  
   return (
     <>
       <Header />
